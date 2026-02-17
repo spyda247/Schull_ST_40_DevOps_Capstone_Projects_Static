@@ -1,176 +1,141 @@
-/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
-
-
-
-/*=======================================
-    GENERAL STYLES
-==================================================*/
+:root {
+  --aws-orange: #ff9900;
+  --aws-blue: #3c6aa3;
+  --light-gray: #f4f4f4;
+}
 body {
-          font-family:'Open Sans', sans-serif;
-    font-size:14px;
-  background-color:#9B60DB;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  color: var(--aws-blue);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 4px;
+}
+a:hover {
+  color: var(--aws-orange);
+}
+/* 1. Full Screen Banner */
+.hero {
+  background:
+    linear-gradient(rgba(35, 47, 62, 0.7), rgba(35, 47, 62, 0.7)),
+    url('images/admin-wheelchair-data-center-coworker-work-together-using-node-tree-tool.jpg'); /* Sample Cloud Image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
-.nav a {
-    color:#ffffff !important;
-}
-.navbar-header a {
-    color:#ffffff !important;
-    padding-right:100px;
+/* 1.1 Author image */
+.hero img {
+  width: 200px;
+  border-radius: 50%;
 }
 
-.text-center {
-    text-align:center;
+/* 2. Bold Heading & CTA */
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  line-height: 0.75em;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.cta-btn {
+  background: var(--aws-orange);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #e68a00;
+  transform: scale(1.05);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family:'Open Sans', sans-serif;
+/* 3. AWS Services Section */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.service-card {
+  padding: 30px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-top: 4px solid var(--aws-orange);
+}
+.service-card i {
+  font-size: 3rem;
+  color: var(--aws-blue);
+  margin-bottom: 15px;
 }
 
-h1 {
-    line-height:80px;
-    font-weight:900;
-    font-size:60px;
-    padding:30px 20px 10px 20px;
+/* 4. & 5. Contact & Feedback Form */
+section#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #121212;
+  color: #ddd;
+  gap: 40px;
 }
-h2 {
-    line-height:40px;
-    font-weight:900;
-    font-size:30px;
-     padding:20px 20px 10px 20px;
-     text-transform:uppercase;
+section#contact > h2,
+section#services > h2 {
+  font-size: 4em;
 }
-h3 {
-    line-height:30px;
-    padding-bottom:20px;
+.contact-container {
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-h4 {
-    line-height:40px;
-    padding-bottom:15px;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
 }
-
-p {
-    font-weight:300;
-    line-height:30px;
-    padding-bottom:20px;
+form > h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 2px;
 }
-
-.space-free {
-    height:100px;
+form p {
+  font-style: italic;
+  color: #717171;
 }
-
-
-section {
-    padding-top:50px;
-    padding-bottom:30px;
+input,
+textarea {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
-
-/*=======================================
-    COLOR CODES
-==================================================*/
-.color-white {
-   background-color:#fff!important;
-}
-.color-dark {
-   background-color:#696969!important;
-}
-
-.color-light {
-   background-color:#E9E9E9!important;
-}
-
-/*=======================================
-    HEADER STYLES
-==================================================*/
-.head-main {
-    font-size:80px !important;
-    font-weight:900!important;
-    color:#fff!important;
-    padding:150px 20px 10px 20px;
-}
-.head-sub-main {
-    font-size:40px !important;
-    font-weight:600!important;
-    color:#fff!important;
-    padding:5px 20px 150px 20px;
-}
-
-
-/*=======================================
-    NAVIGATION STYLES
-==================================================*/
-
-
-nav {
-	position: absolute;
-	width: 100%;
-    background: #fff;
-    z-index:99;
-}
-.fixed {
-	position: fixed; 
-	top: 0; 
-	min-height: 50px; 
-	z-index: 99;
-}
-
-.navbar-inverse {
-background-color: #000000;
-border-color: #000000;
-min-height: 80px;
-padding-top: 10px;
-font-size: 18px;
-}
-.navbar-brand {
-
-font-size: 30px;
-}
-
-/*=======================================
-    WORK FLOW STYLES
-==================================================*/
-
-
-.work-div {
-	width: 100%;
-	border: 0;
-    padding:20px;
-    margin-bottom:30px;
-}
-/*=======================================
-    CONTACT STYLES
-==================================================*/
-
-#social-icon a {
-    color:#616161!important;
-    margin-right:10px;
-}
-.contact-cls {
-    font-size:20px;
-    line-height:40px;
-}
-.cnt {
-width: 100%;
-min-height: 350px;
-border: 1px solid #e1e1e1;
-}
-/*=======================================
-    FOOTER STYLES
-==================================================*/
-
-
-#footer {
-    background-color:#000;
-    color:#fff;
-    padding:20px 50px 20px 50px;
-    text-align:right;
+button[type='submit'] {
+  background: var(--aws-blue);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 4px;
 }
